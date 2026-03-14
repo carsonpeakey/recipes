@@ -5,27 +5,27 @@ version: "v1.0.0"
 tags: []
 ---
 
-:::equipment
+::::equipment
 - Big stock pot (to boil potatoes in)
 - Colander
 - Potato masher
-:::
+::::
 
-:::ingredients
+::::ingredients
 - 4 russet potatoes, peeled & cut into about 8 pieces each
 - 6T butter
 - 1 head of garlic (or at least 8 cloves), minced
 - 3/4 c whole milk
 - 1.5 tsp salt (kosher or Maldon), or to taste, plus more for the cooking water
 - Black pepper to taste
-:::
+::::
 
-:::prep
+::::prep
 - Peel the potatoes
 - Smash and peel the garlic
-:::
+::::
 
-:::cook
+::::cook
 Bring a large pot of salted water to a boil over high. Add the potatoes and
 boil for about 20 minutes, until they offer almost no resistance when pierced
 with a fork. Drain the potatoes in a colander; let them sit in the colander
@@ -44,12 +44,12 @@ potato masher.
 Add the salt and pepper and about 1/4 of the warm garlic-butter-milk mixture,
 and stir with a spatula until incorporated. Continue to stir in the milk
 mixture about 1/4 at a time. Taste and add more salt and pepper if needed.
-:::
+::::
 
-:::serve
+::::serve
 Serve Hot!
-:::
+::::
 
-:::references
+::::references
 Cara
-:::
+::::

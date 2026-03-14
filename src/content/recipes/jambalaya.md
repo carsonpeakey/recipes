@@ -5,7 +5,7 @@ version: "v1.0.0"
 tags: []
 ---
 
-:::ingredients
+::::ingredients
 
 :::callout
 These portions yield ~5C Jambalaya. See ["Sizing"](#sizing) for guidance on
@@ -39,9 +39,9 @@ scaling these portions.
 - Something green like parsley or green onion
 - Vinegar-y hot sauce, like Tabasco, Crystal, Louisiana (or some squeezed
   lemon juice for less spice)
-:::
+::::
 
-:::equipment
+::::equipment
 
 - Dutch oven ([shaped like
    this](https://www.lecreuset.com/round-dutch-oven/21177US.html))
@@ -58,9 +58,9 @@ scaling these portions.
    one](https://www.wusthof.com/products/wusthof-classic-8-cooks-knife-1040100120))
 - Cutting board ([like this one
    :)](https://www.johnboos.com/product/cherry-square-chopping-block-non-reversible-end-grain-4-thick-ccb-series/)
-:::
+::::
 
-:::prep
+::::prep
 
 These steps should be done before even turning on the stove so that your full
 attention can go into tending the saute and then the rice.
@@ -97,9 +97,9 @@ Vegetables can be chopped as early as the day before.
    For 16/20 shrimp, for example, that yields 3-4 pieces per shrimp
 
 1. Keep refrigerated until it's time to add them to the pot
-:::
+::::
 
-:::cook
+::::cook
 #### Stock
 
 1. In a saucepan, heat the stock to a simmer
@@ -138,9 +138,9 @@ Vegetables can be chopped as early as the day before.
    Cook for 2-3 min
 
 1. Garnish with the green stuff, and make hot sauce available
-:::
+::::
 
-:::notes
+::::notes
 #### Sizing
 
 | Size   | Quantity |  Vessel    |
@@ -151,13 +151,13 @@ Vegetables can be chopped as early as the day before.
 | Large  |   3 cups | full plate |
 
 (source: ["Jambalaya Calculator"](#references))
-:::
+::::
 
-:::references
+::::references
 
 - Adapted from *How to Cook Everything*, Bittman, p464.
 - "Jambalaya Calculator", Tigerdroppings.com,
   https://www.tigerdroppings.com/rant/food-and-drink/today-5-11-21-is-the-10th-anniversary-of-the-jambalaya-calculator/96311818/,
   2024-09-13
 
-:::
+::::

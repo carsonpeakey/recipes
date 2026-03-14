@@ -5,12 +5,12 @@ version: "v1.0.0"
 tags: []
 ---
 
-:::equipment
+::::equipment
 - Instant Pot
 - Scoopy spatula
-:::
+::::
 
-:::ingredients
+::::ingredients
 
 :::callout
 These quantities produce 2 servings
@@ -21,20 +21,20 @@ These quantities produce 2 servings
   - 1/2 C Water
   - 3/4 C Soy Milk
 
-:::
+::::
 
-:::cook
+::::cook
 
 Pressure cook 4 minutes (natural venting), rest 12.
 
-:::
+::::
 
-:::serve
+::::serve
 
 Portion into bowls, top with [Super jam](/recipes/super-jam/) and nut butter
 
-:::
+::::
 
-:::references
+::::references
 - [u/bigdave44](https://www.reddit.com/r/instantpot/comments/x6gd62/comment/in74ddg/?context=3&share_id=IWAHb_34zlRpn6dGgNXLB&utm_content=1&utm_medium=ios_app&utm_name=ioscss&utm_source=share&utm_term=1)
-:::
+::::

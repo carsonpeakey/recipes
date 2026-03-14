@@ -5,7 +5,7 @@ version: "v1.0.0"
 tags: []
 ---
 
-:::technique
+::::technique
 ### Safety considerations
 
 Bacteria and finger cuts are the primary considerations when working with
@@ -139,4 +139,4 @@ sides of its 'belly' so that the shell and meat separate.
   loosening the meat from the shell.
 
 This takes practice; go slow at first...
-:::
+::::

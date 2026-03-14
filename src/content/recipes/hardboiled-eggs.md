@@ -5,22 +5,22 @@ version: "v1.0.0"
 tags: []
 ---
 
-:::ingredients
+::::ingredients
 - Dozen eggs
 - Water (1C)
-:::
+::::
 
-:::equipment
+::::equipment
 Instant Pot + trivet
-:::
+::::
 
-:::prep
+::::prep
 1. Place trivet in the bottom of the instant pot
 1. Add 1 C water
 1. Add eggs to the trivet (carefully, one at a time)
-:::
+::::
 
-:::cook
+::::cook
 1. Set Instant Pot
    - Pressure cook
    - 6 minutes
@@ -39,9 +39,9 @@ Instant Pot + trivet
    1. Fridge
       - Transfer the eggs to a seal-able container
       - Seal it and put the container in the fridge
-:::
+::::
 
-:::references
+::::references
 - Variations of the Instant Pot method can be found everywhere on the internet.
 - Thanks to GiGi for the fridge cool-down method.
-:::
+::::

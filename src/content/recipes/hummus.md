@@ -5,15 +5,15 @@ version: "v1.0.0"
 tags: []
 ---
 
-:::equipment
+::::equipment
 - 1/4 C measure
 - Citrus juicer (optional, just squeeze with your hands)
 - Food processor
 - Knife
 - Tablespoon
-:::
+::::
 
-:::ingredients
+::::ingredients
 - 2/3 C dry chickpeas (soaked overnight and pressure-cooked 10 minutes)
 - 2-3 Lemons
 - 2 garlic cloves
@@ -22,15 +22,15 @@ tags: []
 - Cumin
 - Paprika
 - Olive oil
-:::
+::::
 
-:::prep
+::::prep
 - Clean and chop the garlic
 - Halve and juice the lemons
 - Prepare the food processor with its chopping blade
-:::
+::::
 
-:::cook
+::::cook
 1. Add the garlic, oil, cumin, and lemon juice
 1. Pulse to break up the garlic, then run continuously for 20-30 seconds to
    homegenize the mixture
@@ -41,14 +41,14 @@ tags: []
    :::callout
    If the consistency is thick, add more lemon juice.
    :::
-:::
+::::
 
-:::serve
-:::
+::::serve
+::::
 
-:::notes
-:::
+::::notes
+::::
 
-:::references
+::::references
 - Bittman, p93
-:::
+::::

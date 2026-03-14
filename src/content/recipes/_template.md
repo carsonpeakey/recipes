@@ -5,23 +5,23 @@ version: "v1.0.0"
 tags: []
 ---
 
-:::equipment
-:::
+::::equipment
+::::
 
-:::ingredients
-:::
+::::ingredients
+::::
 
-:::prep
-:::
+::::prep
+::::
 
-:::cook
-:::
+::::cook
+::::
 
-:::serve
-:::
+::::serve
+::::
 
-:::notes
-:::
+::::notes
+::::
 
-:::references
-:::
+::::references
+::::

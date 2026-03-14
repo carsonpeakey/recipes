@@ -5,20 +5,20 @@ version: "v1.0.0"
 tags: []
 ---
 
-:::equipment
+::::equipment
 - Medium sauce pan
 - Spatula
 - Closable container for storage (if you're making a lot)
-:::
+::::
 
-:::ingredients
+::::ingredients
 - Frozen raspberries
 - Frozen blueberries
 - Chia seeds
 - Neutral oil
-:::
+::::
 
-:::cook
+::::cook
 
 #### Get started
 
@@ -40,15 +40,15 @@ boil, lower the heat!
 1. Simmer down to the consistency you want
 1. When it's close, add 1T Chia seeds for each cup of fruit in your pan
 
-:::
+::::
 
-:::serve
+::::serve
 1. Spoon onto toast, waffles, or oatmeal
 1. Save for later in the fridge in a sealable container
-:::
+::::
 
-:::references
+::::references
 - ["Finding the Right Ratio: Basic Chia-Yogurt
   Mix"](https://figsinmybelly.com/2014/10/01/finding-the-right-ratio-basic-chia-yogurt-mix/),
   FIGSINMYBELLY
-:::
+::::

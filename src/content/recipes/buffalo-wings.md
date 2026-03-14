@@ -5,7 +5,7 @@ version: "v1.0.0"
 tags: []
 ---
 
-:::equipment
+::::equipment
 
 #### Chicken
 
@@ -31,9 +31,9 @@ tags: []
 - Platter for the wings and veggies
 - Ramekin for the dressing
 
-:::
+::::
 
-:::ingredients
+::::ingredients
 
 :::callout
 These quantities are for a *single* serving.
@@ -57,9 +57,9 @@ These quantities are for a *single* serving.
 - Celery
 - Carrots
 - Blue cheese or ranch dressing
-:::
+::::
 
-:::prep
+::::prep
 
 :::safety
 Taking care not to keep raw chicken and its juices contained and apart from
@@ -112,9 +112,9 @@ the rest of the kitchen...
    1. Roughly chop the garlic
    1. Add garlic, butter, and hot sauce to the small sauce pot
 
-:::
+::::
 
-:::cook
+::::cook
 
 1. Add the sheet pan full of wings to the oven
 
@@ -144,8 +144,8 @@ the rest of the kitchen...
    1. Serve with ranch or blue cheese dressing (NYT Cooking link below also
       provides a recipe for making your own blue cheese)
 
-:::
+::::
 
-:::references
+::::references
 - Adapted from [New York Times Cooking: Baked Buffalo Wings](https://cooking.nytimes.com/recipes/1019952-baked-buffalo-wings)
-:::
+::::
