@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Recipe Box</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Recipe Box</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hummus</title>
+      <link>http://localhost:1313/recipes/hummus/</link>
+      <pubDate>Tue, 12 Nov 2024 22:53:51 -0800</pubDate>
+      <guid>http://localhost:1313/recipes/hummus/</guid>
+      <description>Equipment 1/4 C measure Citrus juicer (optional, just squeeze with your hands) Food processor Knife Tablespoon Ingredients 2/3 C dry chickpeas (soaked overnight and pressure-cooked 10 minutes) 2-3 Lemons 2 garlic cloves Salt Tahini Cumin Paprika Olive oil Prep Clean and chop the garlic Halve and juice the lemons Prepare the food processor with its chopping blade Cook Add the garlic, oil, cumin, and lemon juice&#xA;Pulse to break up the garlic, then run continuously for 20-30 seconds to homegenize the mixture</description>
+    </item>
+    <item>
+      <title>Super Jam</title>
+      <link>http://localhost:1313/recipes/super-jam/</link>
+      <pubDate>Wed, 06 Nov 2024 17:28:26 -0800</pubDate>
+      <guid>http://localhost:1313/recipes/super-jam/</guid>
+      <description>Fruit jam made from super foods</description>
+    </item>
+    <item>
+      <title>Garlic Mashed Potatoes</title>
+      <link>http://localhost:1313/recipes/garlic-mashed-potatoes/</link>
+      <pubDate>Sat, 02 Nov 2024 18:28:30 -0700</pubDate>
+      <guid>http://localhost:1313/recipes/garlic-mashed-potatoes/</guid>
+      <description>A fairly standard recipe for mashed potatoes, with a silly amount of garlic.</description>
+    </item>
+    <item>
+      <title>Baked Buffalo Wings</title>
+      <link>http://localhost:1313/recipes/buffalo-wings/</link>
+      <pubDate>Sun, 20 Oct 2024 20:31:34 -0700</pubDate>
+      <guid>http://localhost:1313/recipes/buffalo-wings/</guid>
+      <description>Crowd-pleaser - a libbit spicy</description>
+    </item>
+    <item>
+      <title>Quick Pho</title>
+      <link>http://localhost:1313/recipes/quick-pho/</link>
+      <pubDate>Sat, 19 Oct 2024 12:54:59 -0700</pubDate>
+      <guid>http://localhost:1313/recipes/quick-pho/</guid>
+      <description>Make pho, quickly</description>
+    </item>
+    <item>
+      <title>Hardboiled Eggs</title>
+      <link>http://localhost:1313/recipes/hardboiled-eggs/</link>
+      <pubDate>Sat, 19 Oct 2024 12:50:28 -0700</pubDate>
+      <guid>http://localhost:1313/recipes/hardboiled-eggs/</guid>
+      <description>Make hard boiled eggs in the instant pot</description>
+    </item>
+    <item>
+      <title>Oatmeal</title>
+      <link>http://localhost:1313/recipes/oatmeal/</link>
+      <pubDate>Sat, 19 Oct 2024 10:18:42 -0700</pubDate>
+      <guid>http://localhost:1313/recipes/oatmeal/</guid>
+      <description>Easy oatmeal in the Instant Pot</description>
+    </item>
+    <item>
+      <title>Cleaning Shrimp</title>
+      <link>http://localhost:1313/techniques/clean-shrimp/</link>
+      <pubDate>Sun, 15 Sep 2024 09:16:43 -0700</pubDate>
+      <guid>http://localhost:1313/techniques/clean-shrimp/</guid>
+      <description>Prepare frozen, shell-on shrimp for cooking</description>
+    </item>
+    <item>
+      <title>Pescatarian Jambalaya</title>
+      <link>http://localhost:1313/recipes/jambalaya/</link>
+      <pubDate>Sun, 15 Sep 2024 09:16:10 -0700</pubDate>
+      <guid>http://localhost:1313/recipes/jambalaya/</guid>
+      <description>Rice, spice, meat, yum</description>
+    </item>
+  </channel>
+</rss>
