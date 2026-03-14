@@ -12,11 +12,11 @@ tags: []
 ::::
 
 ::::ingredients
-- 4 russet potatoes, peeled & cut into about 8 pieces each
-- 6T butter
+- 4 russet potatoes, peeled and cut into about 8 pieces each
+- 6 T butter
 - 1 head of garlic (or at least 8 cloves), minced
-- 3/4 c whole milk
-- 1.5 tsp salt (kosher or Maldon), or to taste, plus more for the cooking water
+- 3/4 C whole milk
+- 1.5 t salt (kosher or Maldon), or to taste, plus more for the cooking water
 - Black pepper to taste
 ::::
 

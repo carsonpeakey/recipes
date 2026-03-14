@@ -17,7 +17,7 @@ These quantities produce 2 servings
 :::
 
 - 1/2 C oat mix (steel cut, rolled)
-- 1 1/4 C Liquid
+- 1 1/4 C liquid
   - 1/2 C Water
   - 3/4 C Soy Milk
 

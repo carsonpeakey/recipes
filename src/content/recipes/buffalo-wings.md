@@ -1,6 +1,6 @@
 ---
 title: "Baked Buffalo Wings"
-summary: "Crowd-pleaser - a libbit spicy"
+summary: "Crowd-pleaser - a little spicy"
 version: "v1.0.0"
 tags: []
 ---
@@ -92,7 +92,7 @@ the rest of the kitchen...
 
 1. Prepare the oven
    1. Adjust the top rack to within 6" of the broiler
-   1. Set the *broiler* to 400F
+   1. Set the *broiler* to 400°F
 
 1. Prepare the wings for baking
 

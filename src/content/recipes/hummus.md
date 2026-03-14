@@ -33,7 +33,7 @@ tags: []
 ::::cook
 1. Add the garlic, oil, cumin, and lemon juice
 1. Pulse to break up the garlic, then run continuously for 20-30 seconds to
-   homegenize the mixture
+   homogenize the mixture
 1. Add the tahini, then the chickpeas
 1. Power on for as long as it takes to puree the chickpeas into the lemon/oil
    slurry.

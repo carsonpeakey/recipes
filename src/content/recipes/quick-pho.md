@@ -17,32 +17,32 @@ tags: []
 
 ### Garnish
 
-- 2t fish sauce
-- bean sprout
-- green onions
-- jalapenos
+- 2 t fish sauce
+- Bean sprouts
+- Green onions
+- Jalapenos
 
 ::::
 
 ::::equipment
-- cutting board
-- sharp knife
+- Cutting board
+- Sharp knife
 - 4 qt pot (or 2 to speed things up)
 ::::
 
 ::::prep
-- peel the ginger and cut it in half
-- cook the noodles (this can be done while the broth is simmering, if you are
+- Peel the ginger and cut it in half
+- Cook the noodles (this can be done while the broth is simmering, if you are
   using 2 pots)
-- chop the veg
+- Chop the veg
 ::::
 
 ::::cook
-- simmer the broth for at least 30min
-- add noodles to bowls
-- ladle hot broth into bowls
-- garnish (or provide self-serve garnish)
-- serve
+- Simmer the broth for at least 30 min
+- Add noodles to bowls
+- Ladle hot broth into bowls
+- Garnish (or provide self-serve garnish)
+- Serve
 ::::
 
 ::::references

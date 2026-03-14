@@ -89,7 +89,7 @@ If the unpeeled shrimp are frozen:
 1. Check frequently for workability by squeezing a few.
 
    You need to be able to insert a knife along its body from the neck
-   towards the tail.  Ideally, they should still be somewhat stiff; if they
+   towards the tail. Ideally, they should still be somewhat stiff; if they
    are floppy, they're getting too warm, so add ice or move them back to
    refrigeration for awhile.
 
