@@ -5,6 +5,7 @@ import IngredientScaler from '../../components/IngredientScaler.svelte';
 import CheckableList from '../../components/CheckableList.svelte';
 import Timer from '../../components/Timer.svelte';
 import PrintButton from '../../components/PrintButton.svelte';
+import SectionNav from '../../components/SectionNav.svelte';
 
 export async function getStaticPaths() {
   const recipes = await getCollection('recipes');
@@ -27,8 +28,11 @@ const { Content } = await render(recipe);
   tags={recipe.data.tags}
   slug={recipe.id}
 >
-  <PrintButton client:load />
-  <IngredientScaler client:load slug={recipe.id} />
+  <div class="recipe-toolbar">
+    <PrintButton client:load />
+    <IngredientScaler client:load slug={recipe.id} />
+  </div>
+  <SectionNav client:load />
   <article>
     <Content />
   </article>

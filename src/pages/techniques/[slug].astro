@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import ContentLayout from '../../layouts/ContentLayout.astro';
 import CheckableList from '../../components/CheckableList.svelte';
 import PrintButton from '../../components/PrintButton.svelte';
+import SectionNav from '../../components/SectionNav.svelte';
 
 export async function getStaticPaths() {
   const techniques = await getCollection('techniques');
@@ -24,6 +25,7 @@ const { Content } = await render(technique);
   slug={technique.id}
 >
   <PrintButton client:load />
+  <SectionNav client:load />
   <article>
     <Content />
   </article>

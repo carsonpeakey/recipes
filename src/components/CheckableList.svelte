@@ -44,6 +44,9 @@
         checkbox.type = 'checkbox';
         checkbox.style.marginRight = '0.5rem';
         checkbox.style.cursor = 'pointer';
+        checkbox.style.width = '1.25rem';
+        checkbox.style.height = '1.25rem';
+        checkbox.style.accentColor = 'var(--color-ocean-light)';
         checkbox.checked = isChecked(sectionId, index);
 
         if (checkbox.checked) {
