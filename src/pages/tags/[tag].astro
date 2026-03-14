@@ -1,0 +1,38 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const recipes = await getCollection('recipes');
+  const techniques = await getCollection('techniques');
+  const allContent = [...recipes.filter((r) => !r.id.startsWith('_')), ...techniques];
+
+  const tags = new Set<string>();
+  allContent.forEach((item) => item.data.tags?.forEach((tag: string) => tags.add(tag)));
+
+  return Array.from(tags).map((tag) => ({
+    params: { tag },
+    props: {
+      tag,
+      items: allContent.filter((item) => item.data.tags?.includes(tag)),
+    },
+  }));
+}
+
+const { tag, items } = Astro.props;
+---
+
+<BaseLayout title={`Tag: ${tag}`}>
+  <h1 style={`color: var(--color-sky)`}>Tag: {tag}</h1>
+  {items.map((item: any) => {
+    const collection = item.collection || 'recipes';
+    return (
+      <div class="m-4 p-4 rounded-lg" style={`background: var(--color-ocean-light)`}>
+        <h2 class="p-2 rounded-sm">
+          <a class="p-2 rounded-lg" style={`background: var(--color-ocean)`} href={`/${collection}/${item.id}/`}>{item.data.title}</a>
+        </h2>
+        {item.data.summary && <p>{item.data.summary}</p>}
+      </div>
+    );
+  })}
+</BaseLayout>

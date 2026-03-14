@@ -1,0 +1,171 @@
+@import "tailwindcss";
+@import "./tokens.css";
+
+/* Base typography and layout */
+body {
+  background-color: var(--color-black);
+  color: var(--color-sky);
+  padding: 1rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+h1 { font-size: 1.875rem; line-height: 2.25rem; }
+h2 { font-size: 1.5rem; line-height: 2rem; margin: 0.5rem 0; }
+h3 { font-size: 1.25rem; line-height: 1.75rem; margin: 0.5rem 0; text-decoration: underline; }
+h4 { font-size: 1rem; line-height: 1.5rem; margin: 0.5rem 0; text-decoration: underline; font-style: italic; }
+
+ul, ol { margin-bottom: 1rem; margin-top: 0.5rem; }
+ol { list-style-type: decimal; margin-left: 1rem; }
+ul { list-style-type: disc; margin-left: 1rem; }
+li { padding-bottom: 0.25rem; }
+
+a { color: var(--color-sky-light); background-color: var(--color-black); }
+
+/* Callout and safety blocks */
+.callout {
+  margin: 1rem 0;
+  padding: 0.5rem 1.25rem;
+  background: var(--color-sky-light);
+  color: var(--color-black);
+  box-sizing: content-box;
+  border: 2px dashed var(--color-ocean);
+  border-radius: 2px;
+}
+
+.safety {
+  margin: 1rem 0;
+  padding: 0.5rem 1.25rem;
+  box-sizing: content-box;
+  border: 8px double var(--color-hot);
+  background: var(--color-hot-light);
+  color: var(--color-black);
+  border-radius: 0.5rem;
+}
+
+/* Content sections */
+.content-section p {
+  margin: 2rem 0;
+}
+
+#ingredients {
+  border: 4px solid var(--color-ocean-light);
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background: var(--color-sky);
+  color: var(--color-black);
+  margin: 1rem 0;
+}
+#ingredients ul { list-style-type: disc; margin-left: 1rem; }
+#ingredients .callout { background: var(--color-sky-light); }
+#ingredients li .callout { margin: 0.5rem 0; }
+
+#equipment {
+  border: 4px solid var(--color-black);
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background: var(--color-sky);
+  color: var(--color-black);
+  margin: 1rem 0;
+}
+#equipment .callout { background: var(--color-sky-light); }
+
+#prep {
+  padding: 1rem;
+  background: var(--color-lake);
+  color: var(--color-black);
+  margin: 1rem 0;
+  border: 4px solid var(--color-black);
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+}
+#prep .callout { background: var(--color-lake-light); }
+#prep ol { margin: 0.5rem 0; }
+#prep ol > li { margin: 0.5rem 0; }
+
+#cook {
+  padding: 1rem;
+  background: var(--color-hot);
+  color: var(--color-black);
+  margin: 1rem 0;
+  border: 4px solid var(--color-black);
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+}
+#cook .callout { background: var(--color-hot-light); }
+
+#serve {
+  background: var(--color-green-light);
+  border: 4px solid var(--color-green);
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: var(--color-black);
+  margin: 1rem 0;
+}
+#serve .callout { background: var(--color-green); }
+
+#notes {
+  background: var(--color-lake);
+  border: 4px solid var(--color-black);
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: var(--color-black);
+  margin: 1rem 0;
+}
+#notes .callout { background: var(--color-lake-light); }
+
+#technique {
+  padding: 1rem;
+  border-radius: 2px;
+  color: var(--color-sky);
+  background: var(--color-black);
+  border: 4px solid var(--color-black-light);
+}
+#technique .callout { background: var(--color-ocean-light); }
+
+#references {
+  color: var(--color-sky);
+  background: var(--color-black-light);
+  border: 4px solid var(--color-ocean);
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+#references .callout { background: var(--color-ocean-light); }
+#references a { background: var(--color-black-light); }
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+th, td {
+  border: 1px solid var(--color-ocean-light);
+  padding: 0.25rem 0.75rem;
+  text-align: left;
+}
+th { background: var(--color-ocean); color: var(--color-sky-light); }
+
+/* Print stylesheet */
+@media print {
+  body { background: white; color: black; }
+  a { color: black; background: none; }
+  nav, footer { display: none; }
+  .content-section {
+    background: white !important;
+    color: black !important;
+    border-width: 1px !important;
+    border-color: #ccc !important;
+  }
+  #ingredients, #equipment, #prep, #cook, #serve, #notes, #technique, #references {
+    background: white !important;
+    color: black !important;
+    border-width: 1px !important;
+  }
+  #references a { background: none; color: black; }
+}
