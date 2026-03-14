@@ -1,0 +1,120 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+PROJ_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+PORT="${DEV_PORT:-4322}"
+
+# Ensure correct Node version via NVM
+export NVM_DIR="${NVM_DIR:-$HOME/.nvm}"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+nvm use 22 > /dev/null 2>&1 || true
+
+cd "$PROJ_DIR"
+
+usage() {
+  cat <<EOF
+Usage: bin/dev <command> [args]
+
+Commands:
+  build              Build the site
+  serve              Start dev server with hot reload
+  preview            Build and start preview server (kills existing)
+  stop               Stop the dev/preview server
+  inspect <pattern>  Search built HTML in dist/ (ripgrep pattern)
+  html <id> <file>   Extract an HTML section by id from a built page
+                     e.g. bin/dev html ingredients dist/recipes/jambalaya/index.html
+EOF
+  exit 1
+}
+
+cmd_build() {
+  npm run build 2>&1
+}
+
+cmd_serve() {
+  cmd_stop 2>/dev/null || true
+  npx astro dev --port "$PORT" &
+  echo "Dev server started on http://localhost:$PORT (pid $!)"
+}
+
+cmd_preview() {
+  cmd_stop 2>/dev/null || true
+  cmd_build
+  npx astro preview --port "$PORT" &
+  echo "Preview server started on http://localhost:$PORT (pid $!)"
+}
+
+cmd_stop() {
+  local pid
+  pid=$(lsof -ti:"$PORT" 2>/dev/null || true)
+  if [ -n "$pid" ]; then
+    kill $pid
+    echo "Stopped process $pid on port $PORT"
+  else
+    echo "Nothing running on port $PORT"
+  fi
+}
+
+cmd_inspect() {
+  local pattern="${1:?Usage: bin/dev inspect <pattern> [file]}"
+  shift
+  local target="${1:-dist/}"
+  grep -rn --color=never "$pattern" "$target"
+}
+
+cmd_html() {
+  local id="${1:?Usage: bin/dev html <id> <file>}"
+  local file="${2:?Usage: bin/dev html <id> <file>}"
+  python3 -c "
+import sys, re
+from html.parser import HTMLParser
+
+html = open('$file').read()
+start = html.find('id=\"$id\"')
+if start == -1:
+    print('No element with id=\"$id\" found', file=sys.stderr)
+    sys.exit(1)
+
+# Walk back to the opening tag
+tag_start = html.rfind('<', 0, start)
+
+# Find the tag name
+tag_name = re.match(r'<(\w+)', html[tag_start:]).group(1)
+
+# Count nesting to find the matching close tag
+depth = 0
+i = tag_start
+while i < len(html):
+    open_m = re.match(r'<' + tag_name + r'[\s>]', html[i:])
+    close_m = re.match(r'</' + tag_name + r'>', html[i:])
+    if open_m:
+        depth += 1
+        i += len(open_m.group())
+    elif close_m:
+        depth -= 1
+        if depth == 0:
+            end = i + len(close_m.group())
+            break
+        i += len(close_m.group())
+    else:
+        i += 1
+else:
+    end = len(html)
+
+section = html[tag_start:end]
+
+# Simple pretty-print: add newlines around tags
+section = re.sub(r'>\s*<', '>\n<', section)
+print(section)
+"
+}
+
+case "${1:-}" in
+  build)   shift; cmd_build "$@" ;;
+  serve)   shift; cmd_serve "$@" ;;
+  preview) shift; cmd_preview "$@" ;;
+  stop)    shift; cmd_stop "$@" ;;
+  inspect) shift; cmd_inspect "$@" ;;
+  html)    shift; cmd_html "$@" ;;
+  *)       usage ;;
+esac
