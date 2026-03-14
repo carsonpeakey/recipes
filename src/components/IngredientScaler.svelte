@@ -193,24 +193,25 @@
     margin-top: 0.5rem;
   }
   select, .target-input {
-    padding: 0.125rem 0.25rem;
+    padding: 0.35rem 0.4rem;
     border: 1px solid var(--color-ocean);
     border-radius: 0.25rem;
     background: white;
     color: var(--color-black);
     font-size: 0.875rem;
   }
+  select { max-width: 100%; }
   .target-input {
-    width: 4rem;
+    width: 4.5rem;
   }
   button {
-    padding: 0.125rem 0.5rem;
+    padding: 0.35rem 0.75rem;
     border-radius: 0.25rem;
     background: var(--color-ocean);
     color: var(--color-sky-light);
     border: 1px solid var(--color-ocean-light);
     cursor: pointer;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
   button:hover {
     background: var(--color-ocean-light);

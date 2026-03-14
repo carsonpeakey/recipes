@@ -13,6 +13,8 @@
     remaining: number;
     running: boolean;
     interval: ReturnType<typeof setInterval> | null;
+    editing: boolean;
+    editValue: string;
   }
 
   let timers = $state<TimerState[]>([]);
@@ -70,6 +72,28 @@
     timers[index].remaining = timers[index].totalSeconds;
   }
 
+  function startEditing(index: number) {
+    const timer = timers[index];
+    if (timer.running) return;
+    timer.editing = true;
+    timer.editValue = String(Math.round(timer.totalSeconds / 60));
+  }
+
+  function commitEdit(index: number) {
+    const timer = timers[index];
+    const mins = parseFloat(timer.editValue);
+    if (!isNaN(mins) && mins > 0 && mins < 600) {
+      timer.totalSeconds = Math.round(mins * 60);
+      timer.remaining = timer.totalSeconds;
+    }
+    timer.editing = false;
+  }
+
+  function handleEditKey(e: KeyboardEvent, index: number) {
+    if (e.key === 'Enter') commitEdit(index);
+    if (e.key === 'Escape') timers[index].editing = false;
+  }
+
   onMount(() => {
     if ('Notification' in window && Notification.permission === 'default') {
       Notification.requestPermission();
@@ -82,6 +106,8 @@
 
       const items = section.querySelectorAll('li, p');
       items.forEach((el) => {
+        // Skip <p> inside <li> — the <li> already captures its text
+        if (el.tagName === 'P' && el.parentElement?.closest('li')) return;
         const text = el.textContent || '';
         const refs = parseTimeReferences(text);
         for (const ref of refs) {
@@ -91,6 +117,8 @@
             remaining: ref.seconds,
             running: false,
             interval: null,
+            editing: false,
+            editValue: '',
           });
         }
       });
@@ -105,9 +133,22 @@
     {#each timers as timer, i}
       <div class="timer-row">
         <span class="timer-label">{timer.label}</span>
-        <span class="timer-display" class:timer-done={timer.remaining <= 0}>
-          {formatTime(timer.remaining)}
-        </span>
+        {#if timer.editing}
+          <input
+            type="text"
+            class="timer-edit"
+            bind:value={timer.editValue}
+            onkeydown={(e) => handleEditKey(e, i)}
+            onblur={() => commitEdit(i)}
+            autofocus
+            aria-label="Minutes"
+          />
+          <span class="timer-edit-hint">min</span>
+        {:else}
+          <button class="timer-display" class:timer-done={timer.remaining <= 0} onclick={() => startEditing(i)} title="Click to adjust time">
+            {formatTime(timer.remaining)}
+          </button>
+        {/if}
         {#if !timer.running}
           <button onclick={() => startTimer(i)}>Start</button>
           {#if timer.remaining < timer.totalSeconds}
@@ -151,22 +192,50 @@
     font-size: 1.125rem;
     min-width: 4rem;
     text-align: right;
+    background: none;
+    border: 1px solid transparent;
+    color: var(--color-sky);
+    cursor: pointer;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+  }
+  .timer-display:hover {
+    border-color: var(--color-ocean-light);
+    background: rgba(224, 251, 252, 0.05);
   }
   .timer-done {
-    color: var(--color-hot);
+    color: var(--color-hot) !important;
     font-weight: bold;
   }
+  .timer-edit {
+    font-family: monospace;
+    font-size: 1.125rem;
+    width: 3.5rem;
+    text-align: right;
+    background: rgba(224, 251, 252, 0.1);
+    border: 1px solid var(--color-ocean-light);
+    border-radius: 0.25rem;
+    color: var(--color-sky);
+    padding: 0.2rem 0.4rem;
+  }
+  .timer-edit-hint {
+    font-size: 0.75rem;
+    opacity: 0.6;
+  }
   button {
-    padding: 0.125rem 0.5rem;
+    padding: 0.35rem 0.75rem;
     border-radius: 0.25rem;
     background: var(--color-ocean);
     color: var(--color-sky-light);
     border: 1px solid var(--color-ocean-light);
     cursor: pointer;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
   button:hover {
     background: var(--color-ocean-light);
+  }
+  @media (max-width: 480px) {
+    .timer-row { flex-wrap: wrap; }
   }
   @media print {
     .timer-panel { display: none; }

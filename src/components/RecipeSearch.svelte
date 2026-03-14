@@ -106,13 +106,13 @@
     margin-top: 0.5rem;
   }
   .tag-chip {
-    padding: 0.125rem 0.5rem;
+    padding: 0.3rem 0.65rem;
     border-radius: 1rem;
     background: rgba(61, 90, 128, 0.3);
     color: var(--color-sky-light);
     border: 1px solid rgba(107, 140, 184, 0.3);
     cursor: pointer;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
   .tag-chip:hover {
     background: rgba(61, 90, 128, 0.5);
