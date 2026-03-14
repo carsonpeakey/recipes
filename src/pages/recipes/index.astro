@@ -1,0 +1,18 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const recipes = (await getCollection('recipes')).filter((r) => !r.id.startsWith('_'));
+---
+
+<BaseLayout title="Recipes">
+  <h1 style={`color: var(--color-sky)`}>Recipes</h1>
+  {recipes.map((recipe) => (
+    <div class="m-4 p-4 rounded-lg" style={`background: var(--color-ocean-light); border-color: var(--color-black-light)`}>
+      <h2 class="p-2 rounded-sm">
+        <a class="p-2 rounded-lg" style={`background: var(--color-ocean)`} href={`/recipes/${recipe.id}/`}>{recipe.data.title}</a>
+      </h2>
+      {recipe.data.summary && <p>{recipe.data.summary}</p>}
+    </div>
+  ))}
+</BaseLayout>

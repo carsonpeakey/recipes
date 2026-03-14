@@ -1,0 +1,37 @@
+---
+import { getCollection, render } from 'astro:content';
+import ContentLayout from '../../layouts/ContentLayout.astro';
+import IngredientScaler from '../../components/IngredientScaler.svelte';
+import CheckableList from '../../components/CheckableList.svelte';
+import Timer from '../../components/Timer.svelte';
+import PrintButton from '../../components/PrintButton.svelte';
+
+export async function getStaticPaths() {
+  const recipes = await getCollection('recipes');
+  return recipes
+    .filter((r) => !r.id.startsWith('_'))
+    .map((recipe) => ({
+      params: { slug: recipe.id },
+      props: { recipe },
+    }));
+}
+
+const { recipe } = Astro.props;
+const { Content } = await render(recipe);
+---
+
+<ContentLayout
+  title={recipe.data.title}
+  summary={recipe.data.summary}
+  version={recipe.data.version}
+  tags={recipe.data.tags}
+  slug={recipe.id}
+>
+  <PrintButton client:visible />
+  <IngredientScaler client:visible slug={recipe.id} />
+  <article>
+    <Content />
+  </article>
+  <CheckableList client:visible slug={recipe.id} sectionIds={["ingredients", "prep", "cook"]} />
+  <Timer client:visible sectionIds={["cook", "prep"]} />
+</ContentLayout>

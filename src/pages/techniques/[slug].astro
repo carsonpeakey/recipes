@@ -1,0 +1,31 @@
+---
+import { getCollection, render } from 'astro:content';
+import ContentLayout from '../../layouts/ContentLayout.astro';
+import CheckableList from '../../components/CheckableList.svelte';
+import PrintButton from '../../components/PrintButton.svelte';
+
+export async function getStaticPaths() {
+  const techniques = await getCollection('techniques');
+  return techniques.map((technique) => ({
+    params: { slug: technique.id },
+    props: { technique },
+  }));
+}
+
+const { technique } = Astro.props;
+const { Content } = await render(technique);
+---
+
+<ContentLayout
+  title={technique.data.title}
+  summary={technique.data.summary}
+  version={technique.data.version}
+  tags={technique.data.tags}
+  slug={technique.id}
+>
+  <PrintButton client:visible />
+  <article>
+    <Content />
+  </article>
+  <CheckableList client:visible slug={technique.id} sectionIds={["technique"]} />
+</ContentLayout>

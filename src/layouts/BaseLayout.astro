@@ -1,0 +1,45 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+}
+
+const { title } = Astro.props;
+const siteTitle = 'Recipe Box';
+const pageTitle = title ? `${title} | ${siteTitle}` : siteTitle;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <title>{pageTitle}</title>
+</head>
+<body>
+  <header>
+    <nav class="flex items-center justify-between mb-4">
+      <a href="/" class="text-3xl font-bold underline" style={`color: var(--color-sky-light)`}>{siteTitle}</a>
+      <div class="flex gap-4">
+        <a href="/recipes/" class="underline">Recipes</a>
+        <a href="/techniques/" class="underline">Techniques</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <slot />
+  </main>
+  <footer class="mt-8 flex justify-center">
+    <div class="p-4 border-4 rounded-lg max-w-lg text-center" style={`background: var(--color-ocean); border-color: var(--color-hot); color: var(--color-sky-light)`}>
+      <p class="py-2 px-4">A collection of recipes we want to remember and share with friends and family. No flowery stories — just increasingly reliable recipes.</p>
+      <p class="py-2 px-4">Sources are provided. Many come from favorite cookbooks and sites, including <a href="https://cooking.nytimes.com/" target="_blank" class="underline">New York Times Cooking</a>.</p>
+      <div class="flex justify-center gap-2 my-2 max-h-12">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="CC BY" class="h-8" />
+        <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="CC" class="h-8" />
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

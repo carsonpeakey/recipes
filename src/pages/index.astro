@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import RecipeSearch from '../components/RecipeSearch.svelte';
+
+const recipes = (await getCollection('recipes')).filter((r) => !r.id.startsWith('_'));
+const techniques = await getCollection('techniques');
+
+const searchItems = [
+  ...recipes.map((r) => ({
+    title: r.data.title,
+    summary: r.data.summary || '',
+    tags: r.data.tags || [],
+    slug: r.id,
+    collection: 'recipes',
+  })),
+  ...techniques.map((t) => ({
+    title: t.data.title,
+    summary: t.data.summary || '',
+    tags: t.data.tags || [],
+    slug: t.id,
+    collection: 'techniques',
+  })),
+];
+---
+
+<BaseLayout>
+  <RecipeSearch client:load items={searchItems} />
+</BaseLayout>

@@ -1,0 +1,18 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const techniques = await getCollection('techniques');
+---
+
+<BaseLayout title="Techniques">
+  <h1 style={`color: var(--color-sky)`}>Techniques</h1>
+  {techniques.map((technique) => (
+    <div class="m-4 p-4 rounded-lg" style={`background: var(--color-ocean-light); border-color: var(--color-black-light)`}>
+      <h2 class="p-2 rounded-sm">
+        <a class="p-2 rounded-lg" style={`background: var(--color-ocean)`} href={`/techniques/${technique.id}/`}>{technique.data.title}</a>
+      </h2>
+      {technique.data.summary && <p>{technique.data.summary}</p>}
+    </div>
+  ))}
+</BaseLayout>
