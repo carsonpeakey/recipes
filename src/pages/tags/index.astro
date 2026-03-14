@@ -15,11 +15,11 @@ const sortedTags = Array.from(tagCounts.entries()).sort((a, b) => b[1] - a[1]);
 ---
 
 <BaseLayout title="Tags">
-  <h1 style={`color: var(--color-sky)`}>Tags</h1>
-  {sortedTags.length === 0 && <p>No tags yet.</p>}
+  <h1>Tags</h1>
+  {sortedTags.length === 0 && <p style={`color: var(--color-black-light)`}>No tags yet.</p>}
   <div class="flex flex-wrap gap-2 mt-4">
     {sortedTags.map(([tag, count]) => (
-      <a href={`/tags/${tag}/`} class="px-3 py-1 rounded-lg" style={`background: var(--color-ocean); color: var(--color-sky-light)`}>
+      <a href={`/tags/${tag}/`} class="px-2 py-0.5 rounded text-sm" style={`background: rgba(61,90,128,0.3); color: var(--color-sky-light); text-decoration: none`}>
         {tag} ({count})
       </a>
     ))}

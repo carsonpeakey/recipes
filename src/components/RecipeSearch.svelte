@@ -89,10 +89,10 @@
   .search-input {
     width: 100%;
     padding: 0.5rem 0.75rem;
-    border: 2px solid var(--color-ocean);
-    border-radius: 0.5rem;
-    background: var(--color-sky);
-    color: var(--color-black);
+    border: 1px solid rgba(224, 251, 252, 0.15);
+    border-radius: 0.25rem;
+    background: rgba(224, 251, 252, 0.05);
+    color: var(--color-sky);
     font-size: 1rem;
     box-sizing: border-box;
   }
@@ -108,38 +108,37 @@
   .tag-chip {
     padding: 0.125rem 0.5rem;
     border-radius: 1rem;
-    background: var(--color-ocean);
+    background: rgba(61, 90, 128, 0.3);
     color: var(--color-sky-light);
-    border: 1px solid var(--color-ocean-light);
+    border: 1px solid rgba(107, 140, 184, 0.3);
     cursor: pointer;
     font-size: 0.75rem;
   }
   .tag-chip:hover {
-    background: var(--color-ocean-light);
+    background: rgba(61, 90, 128, 0.5);
   }
   .tag-chip.active {
-    background: var(--color-hot);
+    background: rgba(238, 108, 77, 0.4);
     border-color: var(--color-hot);
   }
   .result-card {
-    margin: 1rem 0;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    background: var(--color-ocean-light);
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(224, 251, 252, 0.08);
   }
   .result-card h2 {
     margin: 0;
+    font-size: 1.125rem;
   }
   .result-card a {
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.5rem;
-    background: var(--color-ocean);
+    color: var(--color-lake-light);
   }
   .result-card p {
     margin: 0.25rem 0 0;
-    color: var(--color-sky);
+    color: var(--color-black-light);
+    font-size: 0.875rem;
   }
   .no-results {
     font-style: italic;
+    color: var(--color-black-light);
   }
 </style>

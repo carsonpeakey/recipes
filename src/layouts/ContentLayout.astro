@@ -31,24 +31,23 @@ if (!displayImage && slug) {
 
 <BaseLayout title={title}>
   <div class="single">
-    <div class="border-4 rounded-lg p-4 my-4" style={`border-color: var(--color-ocean-light); background: var(--color-ocean)`}>
+    <div class="mb-6">
       {displayImage && (
-        <Image src={displayImage} alt={title} class="w-full rounded-lg mb-2" width={400} height={300} />
+        <Image src={displayImage} alt={title} class="w-full rounded mb-3 opacity-80" width={400} height={300} />
       )}
-      <h2 class="text-2xl" style={`color: var(--color-sky-light)`}>{title}</h2>
-      {summary && <p style={`color: var(--color-sky-light)`}>{summary}</p>}
-      {version && <span class="inline-block text-xs px-2 py-0.5 rounded" style={`background: var(--color-ocean-light); color: var(--color-sky-light)`}>{version}</span>}
+      <h1 style={`color: var(--color-sky)`}>{title}</h1>
+      {summary && <p class="mt-1" style={`color: var(--color-black-light)`}>{summary}</p>}
+      {version && <span class="inline-block text-xs mt-1" style={`color: var(--color-black-light)`}>{version}</span>}
     </div>
 
     <slot />
 
     {tags.length > 0 && (
-      <div class="mt-4">
-        <span>Tags:</span>
-        <ul class="flex gap-2 list-none ml-0">
+      <div class="mt-6 pt-4" style="border-top: 1px solid rgba(224,251,252,0.1)">
+        <ul class="flex gap-2 list-none ml-0 flex-wrap">
           {tags.map((tag: string) => (
             <li class="pb-0">
-              <a href={`/tags/${tag}/`} class="px-2 py-1 rounded text-sm" style={`background: var(--color-ocean); color: var(--color-sky-light)`}>{tag}</a>
+              <a href={`/tags/${tag}/`} class="px-2 py-0.5 rounded text-xs" style={`background: rgba(61,90,128,0.3); color: var(--color-sky-light); text-decoration: none`}>{tag}</a>
             </li>
           ))}
         </ul>
