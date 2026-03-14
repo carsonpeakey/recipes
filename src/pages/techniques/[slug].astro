@@ -23,9 +23,9 @@ const { Content } = await render(technique);
   tags={technique.data.tags}
   slug={technique.id}
 >
-  <PrintButton client:visible />
+  <PrintButton client:load />
   <article>
     <Content />
   </article>
-  <CheckableList client:visible slug={technique.id} sectionIds={["technique"]} />
+  <CheckableList client:load slug={technique.id} sectionIds={["technique"]} />
 </ContentLayout>
